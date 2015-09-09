@@ -14,24 +14,30 @@
 # variabeln "count". Om antalet är 10 eller fler så ska textsträngen "Apan har
 # många bananer" returneras istället.
 def bananas(count):
-    # skriv din egen kod här
-    return
+    if count < 10:
+        return "Apan har " + str(count) + " bananer"
+    else:
+        return "Apan har många bananer"
 
 # Given en textsträng, skriv en funktion returnerar de två första och två sista
 # tecknen i ursprungssträngen. Om strängen är kortare än 2 tecken returnera istället
 # en tom sträng.
 def both_ends(s):
-    # skriv din kod här
-    return
+    if len(s) > 2:
+        return s[0]+ s[1]+s[-2]+s[-1]
+    else:
+        return ""
 
 ####
 # Listor
 
 # Given en lista med strängar, returnera antalet strängar som är längre än 2 tecken.
 def match_lengths(words):
-    # skriv din kod här
-    return
-
+    i = 0
+    for s in words:
+        if len(s) > 2:
+            i = i + 1
+    return i
 ####
 # Följande kod används för att testa dina lösningar för att se
 # om dina lösningar på ovanstående problem är korrekta eller inte.
